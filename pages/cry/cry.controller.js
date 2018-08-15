@@ -1,6 +1,6 @@
 crydecApp.controller('cryController', function ($scope) {
     $scope.cryMessage = 'Time will change Everything';
-    $scope.cryTitle = 'Enter your text to be Encypted';
+    $scope.cryTitle = 'Enter your text to be Encrypted';
     $scope.encryptRawText = function () {
  
         //Text to Be encrypted

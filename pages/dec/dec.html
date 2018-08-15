@@ -17,13 +17,14 @@
                 <br/>
             </div>
             <div class="form-group">
+                    {{decryptedText}}
                 <button class="btn btn-primary black-background" id="btnSubmit" ng-click="decryptToText()">UnTie Me!</button>
             </div>
         </form>
         <div class="col-md-4">
             <br/>            <br/>            <br/>           
             <span class="well" ng-show="!decryptForm.decText.$dirty">Put the Stuff Here</span>
-            {{decryptedText}}
+            
         </div>
  
     </div>

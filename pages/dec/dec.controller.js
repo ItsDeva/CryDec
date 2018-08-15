@@ -1,6 +1,6 @@
 crydecApp.controller('decController', function ($scope) {
     $scope.decMessage = 'Time will change Everything';
-    $scope.decTitle = 'Enter your text to be Decypted';
+    $scope.decTitle = 'Enter your text to be Decrypted';
     $scope.iminbtn = 'btn iminred';
     $scope.timepass=""
     $scope.decryptToText = function () {
