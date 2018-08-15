@@ -4,6 +4,9 @@ crydecApp.controller('decController', function ($scope) {
     $scope.iminbtn = 'btn iminred';
     $scope.timepass=""
     $scope.decryptToText = function () {
+        if($scope.timepass === ""){
+            $scope.timepass = Date.now();
+        }
         var timepassStr = new Date($scope.timepass);
         timepassStr.setSeconds(0);
         var d = Date.parse(timepassStr.toString()).toString().substring(0, 10);
