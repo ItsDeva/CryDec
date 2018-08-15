@@ -13,7 +13,6 @@ crydecApp.config(function ($routeProvider) {
 			templateUrl: '/pages/about/about.html',
 			controller: 'aboutController'
 		})
-
 		.when('/cry', {
 			templateUrl: '/pages/cry/cry.html',
 			controller: 'cryController'
