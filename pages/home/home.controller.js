@@ -1,3 +1,3 @@
 crydecApp.controller('homeController', function($scope) {
-    $scope.message = 'This App is Under Construction';
+    $scope.message = 'Welcome to CryDec App! and you are a Beta Tester';
 });

@@ -12,8 +12,8 @@
     <div class="text-center">
         <h3>{{ cryTitle }}</h3>
         <p>{{ cryMessage }}</p>
-        <div class="col-xs-4"></div>
-        <form name="encryptForm" class="col-xs-4">
+        <div class="col-md-4"></div>
+        <form name="encryptForm" class="col-md-4">
             <div class="form-group">
                 <label for="comment">Message</label>
                 <textarea name="rawText" ng-model="rawText" rows="5" class="form-control" min="2" required></textarea>
@@ -43,7 +43,7 @@
  
         </form>
  
-        <div class="col-xs-4">
+        <div class="col-md-4">
             <br/>            <br/>            <br/>           
             <span class="well" ng-show="!encryptForm.rawText.$dirty">Enter Something</span>
             <span ng-show="successFlag">
