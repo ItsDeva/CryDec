@@ -1,0 +1,10 @@
+.black-background {background-color:#000000;}
+
+/* For angular*/
+    /*Text Input*/
+    input.ng-invalid {
+        background-color: rgb(248, 240, 240);
+    }
+.iminred{
+    background-color: coral;
+}

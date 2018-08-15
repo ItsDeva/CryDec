@@ -1,0 +1,55 @@
+<style>
+    div.a {
+        text-align: justify;
+        /* For Edge */
+        -moz-text-align-last: center;
+        /* For Firefox prior 58.0 */
+        text-align-last: center;
+    }
+</style>
+<nav-Bar></nav-Bar>
+<div ng-controller="cryController">
+    <div class="text-center">
+        <h3>{{ cryTitle }}</h3>
+        <p>{{ cryMessage }}</p>
+        <div class="col-xs-4"></div>
+        <form name="encryptForm" class="col-xs-4">
+            <div class="form-group">
+                <label for="comment">Message</label>
+                <textarea name="rawText" ng-model="rawText" rows="5" class="form-control" min="2" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" ng-model="password" class="form-control" required/><br/>
+                <label>When to view this Message? (24hrs Format)</label>
+                <input type="datetime-local" ng-model="time" class="form-control" required title="Enter Time also"/>
+                <br/>
+                <div class="well" ng-if="!time">Select Date and Time</div>
+                <div class="btn-warning" ng-if="time">Please Remember this Date and Time {{time}}</div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary black-background" id="btnSubmit" ng-click="encryptRawText()">Let's Encrypt!</button>
+            </div>
+ 
+            <br>
+            <br>
+            <div class="a">
+                <textarea rows="6" id="encText" class="form-control" ng-model="encryptedText"></textarea>
+                        {{copyMessage}} 
+            </div>
+            <div>
+                    <input type="button" ng-click="copyText()" class="btn btn-primary" value="Click to Copy">
+            </div>
+ 
+        </form>
+ 
+        <div class="col-xs-4">
+            <br/>            <br/>            <br/>           
+            <span class="well" ng-show="!encryptForm.rawText.$dirty">Enter Something</span>
+            <span ng-show="successFlag">
+                <button class="btn-success">{{ successMessage }}</button>
+            </span>
+        </div>
+ 
+    </div>
+</div>

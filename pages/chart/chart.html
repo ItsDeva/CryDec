@@ -1,0 +1,80 @@
+<style>
+    .custom-file-upload {
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+
+    input[type="file"] {
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+</style>
+<nav-Bar></nav-Bar>
+<div ng-controller="chartController">
+    <div class="text-center">
+        <h3>{{ chartTitle }}</h3>
+        <p>{{ chartMessage }}</p>
+        <h2 ng-show="showUpload">Upload Your File. . . </h2>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4" ng-show="showUpload">
+            <form method="POST" class="form-group">
+                <label>Enter Your Name</label>
+                <input type="text" ng-model="name" class="form-control">
+                <label></label>
+                <input type="file" onchange="angular.element(this).scope().setFiles(this)" ng-model-instant class="form-control btn">
+                <br>
+                <br>
+                <input type="button" class="form-control btn btn-success" value="Upload" ng-click="goNext()">
+            </form>
+        </div>
+
+        <div class="col-md-4" ng-show="showTable">
+            <br/>
+            <br/>
+            <br/>
+            <table ng-if="showTable" class="table table-striped table-responsive">
+                <tr>
+                    <td style="background-color: darkslategray;color: #ccc">Algorithm Name</td>
+                    <td style="background-color: darkslategray;color: #ccc">Score</td>
+                    <td style="background-color: darkslategray;color: #ccc"></td>
+                </tr>
+                <tr ng-repeat="(algoName,algoScore) in algorithmScores.algorithms">
+                    <td>{{algoName }}</td>
+                    <td>{{ algoScore }}</td>
+                    <td>
+                        <input type="button" value="Predict" ng-click="showPredictForm(algoName)" class="btn btn-success">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4" ng-show="showPredict">
+            <form id="predictForm">
+                <h2>{{currentAlgo}}</h2>
+                <br>
+                <br>
+                <table class="table table-striped table-responsive">
+
+                    <tr ng-repeat="(key,value) in algorithmScores.fields">
+                        <td>{{ key }}</td>
+                        <td>
+                            <input type="text" ng-model="value" name="{{$index}}{{$index}}" class="form-control">
+                        </td>
+                    </tr>
+                </table>
+                {{value}}
+                <input type="button" class="btn btn-primary" value="Predict Result" ng-click="predictResult()">
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+</div>

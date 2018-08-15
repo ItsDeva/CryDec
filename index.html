@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="crydecApp">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script src="js/blowfish.js"></script> -->
+  <script src="js/Blowfish.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- SPELLS -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/route.js"></script>
+  <script src="pages/about/about.controller.js"></script>
+  <script src="pages/contact/contact.controller.js"></script>
+  <script src="pages/home/home.controller.js"></script>
+
+  <script src="pages/dec/dec.controller.js"></script>
+  <script src="pages/cry/cry.controller.js"></script>
+
+  <title>Crypto App</title>
+</head>
+<!-- define angular controller -->
+
+<body>
+  <div id="main">
+    <div ng-view></div>
+  </div>
+  <!-- <footer class="text-center navbar-fixed-bottom">
+    <p>We Will Rock Soon
+    </p>
+  </footer> -->
+</body>
+
+</html>
