@@ -3,8 +3,8 @@
     <div class="text-center">
         <h3>{{ decTitle }}</h3>
         <p>{{ decMessage }}</p>
-        <div class="col-xs-4"></div>
-        <form name="decryptForm" class="col-xs-4">
+        <div class="col-md-4"></div>
+        <form name="decryptForm" class="col-md-4">
             <div class="form-group">
                 <label for="comment">Message <button ng-class="iminbtn" ng-click="changeiminbtnclr()">I'm In</button></label>
                 <textarea name="decText" ng-model="decText" rows="5" class="form-control" min="2" required></textarea>
@@ -20,7 +20,7 @@
                 <button class="btn btn-primary black-background" id="btnSubmit" ng-click="decryptToText()">UnTie Me!</button>
             </div>
         </form>
-        <div class="col-xs-4">
+        <div class="col-md-4">
             <br/>            <br/>            <br/>           
             <span class="well" ng-show="!decryptForm.decText.$dirty">Put the Stuff Here</span>
             {{decryptedText}}
